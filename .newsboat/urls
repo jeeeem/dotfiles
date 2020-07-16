@@ -1,0 +1,54 @@
+https://www.youtube.com/feeds/videos.xml?channel_id=
+
+##################
+#######REDDIT#####
+##################
+
+https://www.reddit.com/r/unixporn.rss "~REDDIT: r/unixporn"
+https://www.reddit.com/r/archlinux.rss "~REDDIT: r/archlinux"
+https://www.reddit.com/r/koreanvariety.rss "~REDDIT: r/koreanvariety"
+https://www.reddit.com/r/learnprogramming.rss "~REDDIT: r/learnprogramming"
+https://www.reddit.com/r/whatstheword.rss "~REDDIT: r/whatstheword"
+
+
+##################
+######YOUTUBE#####
+##################
+
+######## Tech Videos ##########
+
+## Tech Devices
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ "~YOUTUBE: Marques Brownlee"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~YOUTUBE: Linux Tech Tips"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMiJRAwDNSNzuYeN2uWa0pA "~YOUTUBE: MrWhoseTheBoss"
+
+## Linux
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~YOUTUBE: Luke Smith"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~YOUTUBE: Distrotube"
+
+## Web Development 
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UC29ju8bIPH5as8OGnQzwJyA "~YOUTUBE: Traversy Media"
+
+######### Entertainment#######
+
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOmHUn--16B90oW2L6FRR3A "~YOUTUBE: BlackPink"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC73zqrs0Th_a9dFUivEmv2A "~YOUTUBE: Cong TV"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCy4llDkj3BpWxbbr5SC4JhA "~YOUTUBE: Paulul"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoz3Kpu5lv-ALhR4h9bDvcw "~YOUTUBE: Shroud"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-lHJZR3Gqxm24_Vd_AJ5Yw "~YOUTUBE: PewDiePie"
+
+#################
+###ARCH-LINUX####
+#################
+
+https://www.archlinux.org/feeds/packages/added/ "~ARCH: Packages Added"
+https://www.archlinux.org/feeds/packages/removed/ "~ARCH: Packages Removed"
+https://aur.archlinux.org/rss/ "~ARCH: Packages Added (AUR)"
+https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki"
+
+
+
