@@ -147,7 +147,11 @@ yarn.lock
 .config/mimeapps.list
 .config/mopidy/
 .config/mps-youtube/
-.config/mpv/
+.config/mpv/encoding.rst
+.config/mpv/input.conf
+.config/mpv/mplayer-input.conf
+.config/mpv/restore-old-bindings.conf
+.config/mpv/tech-overview.txt
 .config/neofetch/
 .config/nvim/
 .config/okularrc
