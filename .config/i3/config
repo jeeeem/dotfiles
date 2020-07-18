@@ -265,7 +265,7 @@ exec alacritty --class monitor -e htop
 exec alacritty --class monitor -e gotop
 exec alacritty --class news -e newsboat
 exec xpad
-exec neovide
+#exec neovide
 
 bindsym $mod+F1 exec firefox
 bindsym $mod+Shift+F2 exec code
@@ -368,7 +368,6 @@ smart_borders on
 smart_borders no_gaps
 #hide_edge_borders
 #border_radius 2
-
-
-#exec_always picom
-exec_always picom -e 0.5
+exec_always --no-startup-id picom -e 0.5
+#exec_always --no-startup-id picom -e 0.5 --backend glx --blur-method kawase
+#exec_always --no-startup-id picom -e 0.5 --backend glx --experimental-backends --blur-method dual_kawase --blur-strength 5 
