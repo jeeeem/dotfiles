@@ -130,6 +130,7 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
+alias k9="killall -9"
 alias t="tmux -u"
 alias ta="tmux -u a"
 alias tls="tmux ls"
