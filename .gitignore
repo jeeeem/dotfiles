@@ -27,6 +27,7 @@
 .mplayer/
 .mume/
 .NERDTreeBookmarks
+.netrc
 .newsboat/cache.db
 .newsboat/cache.db.lock
 .newsboat/history.cmdline
@@ -38,6 +39,7 @@
 .quokka/
 .shell.pre-oh-my-zsh
 .ssh/
+.ssr/
 .thunderbird/
 .tmux/
 .vim/
@@ -66,6 +68,7 @@ Doc1.docx
 Downloads/
 Imporant-Files/
 Pictures/
+Videos/
 a.out
 gruvbox
 id_rsa

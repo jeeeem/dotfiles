@@ -86,6 +86,7 @@ SPACESHIP_EXIT_CODE_SHOW=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-prompt
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
