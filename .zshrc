@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export DENO_INSTALL="/home/beren/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/beren/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
@@ -17,8 +20,8 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_TIME_12HR=true
 
 # Directory
+SPACESHIP_DIR_TRUNC=2
 SPACESHIP_DIR_TRUNC_PREFIX=../
-SPACESHIP_DIR_TRUNC='2' 
 
 # Command Line
 SPACESHIP_VI_MODE_SHOW=false
@@ -86,7 +89,6 @@ SPACESHIP_EXIT_CODE_SHOW=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  git-prompt
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
@@ -131,6 +133,7 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
+alias nr="npm run"
 alias k9="killall -9"
 alias t="tmux -u"
 alias ta="tmux -u a"
