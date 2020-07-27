@@ -133,6 +133,7 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
+alias cl="clear"
 alias nr="npm run"
 alias k9="killall -9"
 alias t="tmux -u"
