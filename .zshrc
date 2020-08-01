@@ -40,24 +40,30 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
-  z.lua
-  fzf-z
 )
  autoload -U compinit && compinit
 
 # neofetch
 
 # Zplug Plugins
+FZ_HISTORY_CD_CMD="_zlua"
+
 source ~/.zplug/init.zsh
 source ~/.zplug/repos/changyuheng/fz/fz.sh
 source ~/.zplug/repos/momo-lab/zsh-abbrev-alias/abbrev-alias.plugin.zsh
+eval "$(lua ~/.zplug/repos/z.lua/z.lua --init zsh enhanced)"
 zplug "changyuheng/fz", defer:1
 zplug "momo-lab/zsh-abbrev-alias"
-FZ_HISTORY_CD_CMD="_zlua"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -93,6 +99,7 @@ alias tks="tmux kill-server"
 alias r="ranger"
 alias v="nvim"
 alias rmswap="rm -rf .local/share/nvim/swap"
+alias zh='z -I -t .'
 
 # Abbreviation
 abbrev-alias -g sps="sudo pacman -S"
@@ -104,9 +111,6 @@ abbrev-alias -g sps="sudo pacman -S"
 #}
 #zle -N expand-alias
 #bindkey -M main ' ' expand-alias
-
-# Z.lua Autojump
-export _ZL_MATCH_MODE=1
 
 # Integrate Vi-Mode
 bindkey -v
@@ -168,6 +172,12 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 function vi_mode_prompt_info() {
   echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
+}
+
+# Auto ls every cd
+function chpwd(){
+   emulate -L zsh
+   ls -a
 }
 
 # Define right prompt, regardless of whether the theme defined it
