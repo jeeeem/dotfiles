@@ -20,6 +20,8 @@
 .zcompdump-DESKTOP-1559MF7-5.8
 .zsh_history
 .zshrc.pre-oh-my-zsh
+.zlua
+.zplug/
 git-clone/
 gruvbox
 projects/
