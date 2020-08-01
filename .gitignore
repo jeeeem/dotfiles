@@ -29,6 +29,8 @@ projects/
 .config/coc/
 .config/configstore/
 .config/gitui/
+.config/spotifyd
+.config/spotify-tui
 .config/htop/
 .config/jesseduffield/
 .config/neofetch/
