@@ -37,3 +37,4 @@ projects/
 .config/nvim/
 .tmux/
 vimwiki/
+.config/ranger/plugins/
