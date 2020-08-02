@@ -35,3 +35,5 @@ projects/
 .config/jesseduffield/
 .config/neofetch/
 .config/nvim/
+.tmux/
+vimwiki/
