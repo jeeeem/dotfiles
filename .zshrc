@@ -98,7 +98,7 @@ alias tkt="tmux kill-session -t"
 alias tks="tmux kill-server"
 alias r="ranger"
 alias v="nvim"
-alias rmswap="rm -rf .local/share/nvim/swap"
+alias rmswap="rm -rf ~/.local/share/nvim/swap"
 alias zh='z -I -t .'
 
 # Abbreviation

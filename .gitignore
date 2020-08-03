@@ -38,3 +38,4 @@ projects/
 .tmux/
 vimwiki/
 .config/ranger/plugins/
+.config/vifm/
