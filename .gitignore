@@ -39,3 +39,9 @@ projects/
 vimwiki/
 .config/ranger/plugins/
 .config/vifm/
+.cargo/
+.dbshell
+.gnupg/
+.mongorc.js
+.nvimlog
+.tig_history
