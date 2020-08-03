@@ -97,7 +97,8 @@ plugins=(
 )
  autoload -U compinit && compinit
 
-# neofetch
+# Node Version Managaer (NVM)
+source /usr/share/nvm/init-nvm.sh
 
 # Zplug Plugins
 source ~/.zplug/init.zsh
@@ -144,7 +145,7 @@ alias r="ranger"
 alias tkt="tmux kill-session -t"
 alias tks="tmux kill-server"
 alias v="nvim"
-alias rmswap="rm -rf .local/share/nvim/swap"
+alias rmswap="rm -rf ~/.local/share/nvim/swap"
 
 # Abbreviation
 abbrev-alias -g sps="sudo pacman -S"
