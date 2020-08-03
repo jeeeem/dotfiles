@@ -208,3 +208,6 @@ xterm-256color-italic.terminfo
 .config/xsettingsd/
 .config/yakuake.notifyrc
 .config/yakuakerc
+.config/jesseduffield/
+.nvm/
+.tig_history
