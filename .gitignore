@@ -45,3 +45,4 @@ vimwiki/
 .mongorc.js
 .nvimlog
 .tig_history
+.cs_cache
