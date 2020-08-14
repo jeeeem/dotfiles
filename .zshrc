@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+# X-Server
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+export LIBGL_ALWAYS_INDIRECT=1
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export DENO_INSTALL="/home/beren/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -185,3 +187,20 @@ RPS1='$(vi_mode_prompt_info)'
 RPS2=$RPS1
 
 zplug load
+
+### Added by Zinit's installer
+#if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    #print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    #command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    #command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        #print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        #print -P "%F{160}▓▒░ The clone has failed.%f%b"
+#fi
+
+#source "$HOME/.zinit/bin/zinit.zsh"
+#autoload -Uz _zinit
+#(( ${+_comps} )) && _comps[zinit]=_zinit
+#### End of Zinit's installer chunk
+
+#zinit ice wait:2 lucid extract"" from"gh-r" as"command" mv"taskwarrior-tui* -> tt"
+#zinit load kdheepak/taskwarrior-tui
