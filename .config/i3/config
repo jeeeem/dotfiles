@@ -58,8 +58,8 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-bindsym $mod+Shift+Tab focus left
-bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus up
+bindsym $mod+Tab focus down
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -139,16 +139,16 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+ctrl+1 workspace number $ws11
-bindsym $mod+ctrl+2 workspace number $ws12
-bindsym $mod+ctrl+3 workspace number $ws13
-bindsym $mod+ctrl+4 workspace number $ws14
-bindsym $mod+ctrl+5 workspace number $ws15
-bindsym $mod+ctrl+6 workspace number $ws16
-bindsym $mod+ctrl+7 workspace number $ws17
-bindsym $mod+ctrl+8 workspace number $ws18
-bindsym $mod+ctrl+9 workspace number $ws19
-bindsym $mod+ctrl+0 workspace number $ws20
+bindsym $alt+1 workspace number $ws11
+bindsym $alt+2 workspace number $ws12
+bindsym $alt+3 workspace number $ws13
+bindsym $alt+4 workspace number $ws14
+bindsym $alt+5 workspace number $ws15
+bindsym $alt+6 workspace number $ws16
+bindsym $alt+7 workspace number $ws17
+bindsym $alt+8 workspace number $ws18
+bindsym $alt+9 workspace number $ws19
+bindsym $alt+0 workspace number $ws20
 
 bindsym $alt+Tab workspace back_and_forth
 
@@ -163,16 +163,16 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-bindsym $mod+ctrl+Shift+1 move container to workspace number $ws11
-bindsym $mod+ctrl+Shift+2 move container to workspace number $ws12
-bindsym $mod+ctrl+Shift+3 move container to workspace number $ws13
-bindsym $mod+ctrl+Shift+4 move container to workspace number $ws14
-bindsym $mod+ctrl+Shift+5 move container to workspace number $ws15
-bindsym $mod+ctrl+Shift+6 move container to workspace number $ws16
-bindsym $mod+ctrl+Shift+7 move container to workspace number $ws17
-bindsym $mod+ctrl+Shift+8 move container to workspace number $ws18
-bindsym $mod+ctrl+Shift+9 move container to workspace number $ws19
-bindsym $mod+ctrl+Shift+0 move container to workspace number $ws20
+bindsym $alt+Shift+1 move container to workspace number $ws11
+bindsym $alt+Shift+2 move container to workspace number $ws12
+bindsym $alt+Shift+3 move container to workspace number $ws13
+bindsym $alt+Shift+4 move container to workspace number $ws14
+bindsym $alt+Shift+5 move container to workspace number $ws15
+bindsym $alt+Shift+6 move container to workspace number $ws16
+bindsym $alt+Shift+7 move container to workspace number $ws17
+bindsym $alt+Shift+8 move container to workspace number $ws18
+bindsym $alt+Shift+9 move container to workspace number $ws19
+bindsym $alt+Shift+0 move container to workspace number $ws20
 
 # Multiple Monitor
 workspace $ws1 output eDP-1

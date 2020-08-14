@@ -211,3 +211,6 @@ xterm-256color-italic.terminfo
 .config/jesseduffield/
 .nvm/
 .tig_history
+hs_err_pid605.log
+.config/MongoDB Compass/
+hs_err_pid593.log
