@@ -48,3 +48,9 @@ vimwiki/
 .cs_cache
 .Xauthority
 .xinitrc
+.psql_history
+.zcompdump.DESKTOP-1559MF7.1867 
+.zinit/
+project/
+.config/pgcli/history
+.config/pgcli/log
