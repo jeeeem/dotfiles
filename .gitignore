@@ -224,3 +224,5 @@ hs_err_pid593.log
 .pgAdmin4.startup.log
 .pgadmin/
 .psql_history
+.config/pgcli/log
+.config/pgcli/history
