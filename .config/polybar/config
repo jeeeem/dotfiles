@@ -67,7 +67,7 @@ font-3 = HackNerdFont:style=Regular:pixelsize=9:antialias=false;3
 ;font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 modules-left = powermenu i3 xwindow
-modules-center = spotify previous playpause next
+;modules-center = spotify previous playpause next
 modules-right = xkeyboard filesystem xbacklight pulseaudio cpu memory wlan eth battery temperature date 
 
 tray-position = right
@@ -174,20 +174,20 @@ label-urgent-padding = 2
 ; label-separator = |
 ;
 
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "
-format-prefix-foreground = "#55aa55"
+;[module/spotify]
+;type = custom/script
+;interval = 1
+;format-prefix = " "
+;format-prefix-foreground = "#55aa55"
 
-format = <label>
-exec = python $HOME/.config/polybar/spotify.py -f '{artist}: {song}' -t 45
-#exec = python3 $HOME/.config/polybar/spotify_status.py
-format-underline = 
-format-foreground =  "#55aa55"
+;format = <label>
+;exec = python $HOME/.config/polybar/spotify.py -f '{artist}: {song}' -t 45
+;#exec = python3 $HOME/.config/polybar/spotify_status.py
+;format-underline = 
+;format-foreground =  "#55aa55"
 
-label-song-maxlen = 25
-label-song-ellipsis = true
+;label-song-maxlen = 25
+;label-song-ellipsis = true
 
 
 [module/previous]

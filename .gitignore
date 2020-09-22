@@ -226,3 +226,8 @@ hs_err_pid593.log
 .psql_history
 .config/pgcli/log
 .config/pgcli/history
+.zcompdump.archlinux.2952
+.config/blender/
+.config/rofi/config.rasi.backup
+.dotnet/
+.screenlayout/
