@@ -231,3 +231,5 @@ hs_err_pid593.log
 .config/rofi/config.rasi.backup
 .dotnet/
 .screenlayout/
+.config/gtk-2.0/
+hs_err_pid372985.log
