@@ -199,7 +199,6 @@ workspace $ws20 output VGA-1
 assign [class="Code"] $ws2
 assign [class="neovide"] $ws2
 assign [instance="monitor"] $ws4
-assign [instance="monitor"] $ws4
 for_window [class="mpv"] move to workspace $ws5
 for_window [class="xpad"] move to workspace $ws6
 assign [instance="news"] $ws7
@@ -261,8 +260,9 @@ exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 # Starting things with Plasma I3
 
 ## Startup Applications
-exec alacritty --class monitor -e htop
-exec alacritty --class monitor -e gotop
+exec alacritty --class monitor -e bpytop
+#exec alacritty --class monitor -e htop
+#exec alacritty --class monitor -e gotop
 exec alacritty --class news -e newsboat
 exec xpad
 #exec neovide
