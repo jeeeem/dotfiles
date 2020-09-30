@@ -88,8 +88,8 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
-alias ls="exa -lhFbTL1"
-alias lsg="exa -lhFbG"
+alias ls="exa -lhFbTL1 --icons"
+alias lsg="exa -lhFbG --icons"
 alias cl="clear"
 alias nr="npm run"
 alias k9="killall -9"
