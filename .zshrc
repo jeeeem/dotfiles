@@ -182,7 +182,7 @@ function vi_mode_prompt_info() {
 # Auto ls every cd
 function chpwd(){
    emulate -L zsh
-   ls -a
+   ls
 }
 
 # Define right prompt, regardless of whether the theme defined it
