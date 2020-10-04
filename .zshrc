@@ -4,6 +4,9 @@
 #export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export DENO_INSTALL="/home/beren/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="/home/beren/bin:$PATH"
+export PATH="/home/beren/.cargo/bin:$PATH"
+export PATH="/home/beren/.local/bin:$PATH"
 #export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
@@ -108,6 +111,7 @@ alias zh='z -I -t .'
 
 # Abbreviation
 abbrev-alias -g sps="sudo pacman -S"
+abbrev-alias -g spyu="sudo pacman -Syu"
 
 # Auto-expand aliases (Not working alongside with Vi-mod)
 #function expand-alias() {
