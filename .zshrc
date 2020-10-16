@@ -107,11 +107,12 @@ alias tks="tmux kill-server"
 alias r="ranger"
 alias v="nvim"
 alias rmswap="rm -rf ~/.local/share/nvim/swap"
+alias zat="zathura"
 alias zh='z -I -t .'
 
 # Abbreviation
 abbrev-alias -g sps="sudo pacman -S"
-abbrev-alias -g spyu="sudo pacman -Syu"
+abbrev-alias -g spsyu="sudo pacman -Syu"
 
 # Auto-expand aliases (Not working alongside with Vi-mod)
 #function expand-alias() {

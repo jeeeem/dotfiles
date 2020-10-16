@@ -200,10 +200,11 @@ assign [class="Code"] $ws2
 assign [class="neovide"] $ws2
 assign [instance="monitor"] $ws4
 for_window [class="mpv"] move to workspace $ws5
+assign [class="xpad"] $ws6
 for_window [class="xpad"] move to workspace $ws6
 assign [instance="news"] $ws7
 for_window [class="ktorrent"] move to workspace $ws8
-assign [class="Anki"] $ws9
+#assign [class="Anki"] $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
 # reload the configuration file
