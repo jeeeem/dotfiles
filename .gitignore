@@ -255,3 +255,6 @@ hs_err_pid372985.log
 go/
 hs_err_pid118175.log
 pandoc.out
+.chewing/
+.config/qt5ct/
+Temp/
