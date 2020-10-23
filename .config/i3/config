@@ -269,16 +269,16 @@ exec alacritty --class monitor -e bpytop
 #exec alacritty --class monitor -e htop
 #exec alacritty --class monitor -e gotop
 exec alacritty --class news -e newsboat
-exec xpad
+exec --no-startup-id xpad
 #exec neovide
 
 bindsym $mod+F1 exec firefox
-bindsym $mod+Shift+F2 exec code
-bindsym $mod+F2 exec neovide
+# bindsym $mod+Shift+F2 exec code
+# bindsym $mod+F2 exec neovide
 bindsym $mod+F3 exec dolphin
-bindsym $mod+F4 exec alacritty --class ranger -e ranger
-bindsym $mod+F5 exec anki
-bindsym $mod+F10 exec spotify
+# bindsym $mod+F4 exec alacritty --class ranger -e ranger
+# bindsym $mod+F5 exec anki
+# bindsym $mod+F10 exec spotify
 
 
 # Desktop Background 
@@ -296,19 +296,21 @@ for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
 for_window [class="krunner"] floating enable, border none, move right 450
 for_window [class="dolphin"] floating enable, border none, resize set 915 600, move position center
+for_window [class="dolphin"] floating enable, border none, resize set 915 600, move position center
 for_window [class="mpv"] floating enable, border none, resize set 900 800, move position center
 for_window [instance="ranger"] floating enable, border none, resize set 1265 635, move position center
 for_window [class="Spotify"] floating enable, border none, resize set 1265 635, move position center
 for_window [class="qutebrowser"] floating enable, border none, resize set 950 680, move position center
 for_window [class="vlc"] floating enable, border none, move position center
 for_window [class="ark"] floating enable, border none
-for_window [class="Anki"] floating enable, border none, move position center
+# for_window [class="Anki"] floating enable, border none, move position center
 for_window [class="Kmix"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="kruler"] floating enable, border none
 for_window [class="ktorrent"] floating enable, border none, move position center
 for_window [class="xpad"] floating enable, border none
 for_window [class="Plasmaidviewer"] floating enable, border none
+# i3 config file (v4)
 for_window [class="(?i) *nextcloud*"] floating enable, border none
 for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 1023 949
 no_focus [class="plasmashell" window_type="notification"] 
