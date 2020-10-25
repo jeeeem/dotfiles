@@ -44,6 +44,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
+  fzf-tab
 )
  autoload -U compinit && compinit
 
