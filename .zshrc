@@ -92,6 +92,8 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
+alias eft="enable-fzf-tab"
+alias tft="toggle-fzf-tab"
 alias ls="exa -lhFbTL1 --icons"
 alias lsg="exa -lhFbG --icons"
 alias cl="clear"
@@ -153,7 +155,7 @@ bindkey -M vicmd '/' history-incremental-search-forward
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 bindkey "^P" up-line-or-beginning-search
-bindkey "^N" up-line-or-beginning-search
+bindkey "^N" down-line-or-beginning-search
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 
