@@ -207,7 +207,7 @@ for_window [class="mpv"] move to workspace $ws5
 assign [class="xpad"] $ws6
 for_window [class="xpad"] move to workspace $ws6
 assign [instance="news"] $ws7
-for_window [class="ktorrent"] move to workspace $ws8
+#for_window [class="ktorrent"] move to workspace $ws8
 #assign [class="Anki"] $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
@@ -309,6 +309,7 @@ for_window [class="Kmix"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="kruler"] floating enable, border none
 for_window [class="ktorrent"] floating enable, border none, move position center
+for_window [class="qBittorrent"] floating enable, border none, move position center
 for_window [class="xpad"] floating enable, border none
 for_window [class="Plasmaidviewer"] floating enable, border none
 # i3 config file (v4)

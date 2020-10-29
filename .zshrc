@@ -18,6 +18,9 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
 
+# FZT-TAB CONFIGURATION 
+zstyle ':completion:*:descriptions' format '[%d]'
+
 # THEME CONFIGURATION
 #
 # Time
