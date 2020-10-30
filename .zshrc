@@ -60,12 +60,20 @@ FZ_HISTORY_CD_CMD="_zlua"
 
 source ~/.zplug/init.zsh
 source ~/.zplug/repos/momo-lab/zsh-abbrev-alias/abbrev-alias.plugin.zsh
+source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
+
 eval "$(lua ~/.zplug/repos/z.lua/z.lua --init zsh enhanced)"
 zplug "momo-lab/zsh-abbrev-alias"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Enable fzf-tab on default
+if [ -n "$TMUX" ]; then
+    enable-fzf-tab
+fi 
+
+# Zplug
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
   if read -q; then
