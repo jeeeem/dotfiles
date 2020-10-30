@@ -20,9 +20,12 @@ ZSH_THEME="spaceship"
 
 # FZT-TAB CONFIGURATION 
 zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 # THEME CONFIGURATION
-#
+
 # Time
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_TIME_12HR=true
@@ -52,15 +55,12 @@ plugins=(
  autoload -U compinit && compinit
 
 source /usr/share/nvm/init-nvm.sh
-
 # Zplug Plugins
 FZ_HISTORY_CD_CMD="_zlua"
 
 source ~/.zplug/init.zsh
-source ~/.zplug/repos/changyuheng/fz/fz.sh
 source ~/.zplug/repos/momo-lab/zsh-abbrev-alias/abbrev-alias.plugin.zsh
 eval "$(lua ~/.zplug/repos/z.lua/z.lua --init zsh enhanced)"
-zplug "changyuheng/fz", defer:1
 zplug "momo-lab/zsh-abbrev-alias"
 source $ZSH/oh-my-zsh.sh
 
