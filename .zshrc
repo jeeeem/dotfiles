@@ -12,6 +12,7 @@ export PATH="/home/beren/.local/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/beren/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -68,9 +69,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Enable fzf-tab on default
-if [ -n "$TMUX" ]; then
+# Enable fzf-tab on default & Create default tmux session
+if [[ -n "$TMUX" ]]; then
     enable-fzf-tab
+  elif [[ -z "$TMUX" ]]; then
+   tmux -u new -As default
 fi 
 
 # Zplug
@@ -194,20 +197,19 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
+#function vi_mode_prompt_info() {
+  #echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
+#}
 
-function vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
-}
+ #Define right prompt, regardless of whether the theme defined it
+#RPS1='$(vi_mode_prompt_info)'
+#RPS2=$RPS1
 
 # Auto ls every cd
 function chpwd(){
    emulate -L zsh
    ls
 }
-
-# Define right prompt, regardless of whether the theme defined it
-RPS1='$(vi_mode_prompt_info)'
-RPS2=$RPS1
 
 zplug load
 
