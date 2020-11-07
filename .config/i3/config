@@ -62,8 +62,12 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
+# TODO: When I use layout STACKING the config will be focus UP/DOWN but when it is layout TABBED, it will be focus LEFT/RIGHT.
 bindsym $mod+Shift+Tab focus up
 bindsym $mod+Tab focus down
+
+bindsym $mod+Ctrl+Shift+Tab focus left
+bindsym $mod+Ctrl+Tab focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -200,16 +204,16 @@ workspace $ws18 output VGA-1
 workspace $ws19 output VGA-1
 workspace $ws20 output VGA-1
 
-assign [class="Code"] $ws2
-assign [class="neovide"] $ws2
-assign [instance="monitor"] $ws4
-for_window [class="mpv"] move to workspace $ws5
-assign [class="xpad"] $ws6
-for_window [class="xpad"] move to workspace $ws6
-assign [instance="news"] $ws7
+#assign [class="Code"] $ws2
+#assign [class="neovide"] $ws2
+#assign [instance="monitor"] $ws4
+#for_window [class="mpv"] move to workspace $ws5
+#assign [class="xpad"] $ws6
+#for_window [class="xpad"] move to workspace $ws6
+#assign [instance="news"] $ws7
 #for_window [class="ktorrent"] move to workspace $ws8
 #assign [class="Anki"] $ws9
-for_window [class="Spotify"] move to workspace $ws10
+#for_window [class="Spotify"] move to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -273,8 +277,9 @@ exec --no-startup-id xpad
 #exec neovide
 
 bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec anki
+bindsym $mod+F2 exec emacs
 bindsym $mod+F3 exec dolphin
+bindsym $mod+F4 exec anki
 
 # Desktop Background 
 #exec_always sh ~/.fehbg
@@ -304,6 +309,7 @@ for_window [class="gwenview"] floating enable, border none, move position center
 for_window [class="xdman-Main"] floating enable, border none, move position center
 for_window [class="Kmix"] floating enable, border none
 for_window [class="kolourpaint"] floating enable, border none
+for_window [class="okular"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="kruler"] floating enable, border none
 for_window [class="ktorrent"] floating enable, border none, move position center

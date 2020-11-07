@@ -2,11 +2,12 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export DENO_INSTALL="/home/beren/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="/home/beren/bin:$PATH"
-export PATH="/home/beren/.cargo/bin:$PATH"
-export PATH="/home/beren/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.emacsbin:$PATH"
 #export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
@@ -17,7 +18,8 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
+eval "$(starship init zsh)"
 
 # FZT-TAB CONFIGURATION 
 zstyle ':completion:*:descriptions' format '[%d]'
@@ -71,9 +73,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Enable fzf-tab on default & Create default tmux session
 if [[ -n "$TMUX" ]]; then
-    enable-fzf-tab
-  elif [[ -z "$TMUX" ]]; then
-   tmux -u new -As default
+   enable-fzf-tab
+ #elif [[ -z "$TMUX" ]]; then
+     #tmux -u new -As default
 fi 
 
 # Zplug
@@ -106,6 +108,8 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
+alias cp="cp -g"
+alias mv="mv -g"
 alias eft="enable-fzf-tab"
 alias tft="toggle-fzf-tab"
 alias ls="exa -lhFbTL1 --icons"
