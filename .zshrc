@@ -8,6 +8,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.emacsbin:$PATH"
+export TMPDIR=~/tmp
 #export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.

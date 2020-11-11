@@ -206,11 +206,12 @@ workspace $ws20 output VGA-1
 
 #assign [class="Code"] $ws2
 #assign [class="neovide"] $ws2
-#assign [instance="monitor"] $ws4
+assign [instance="monitor"] $ws4
 #for_window [class="mpv"] move to workspace $ws5
 #assign [class="xpad"] $ws6
-#for_window [class="xpad"] move to workspace $ws6
-#assign [instance="news"] $ws7
+assign [class="xpad"]  $ws6
+for_window [class="xpad"] move to workspace $ws6
+assign [instance="news"] $ws7
 #for_window [class="ktorrent"] move to workspace $ws8
 #assign [class="Anki"] $ws9
 #for_window [class="Spotify"] move to workspace $ws10
@@ -250,8 +251,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
+# (plus the system information i3status
 # finds out, if available)
 #bar {
 #        status_command i3status 
@@ -296,8 +296,8 @@ for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
 for_window [class="krunner"] floating enable, border none, move right 450
 for_window [class="dolphin"] floating enable, border none, resize set 915 600, move position center
-for_window [class="dolphin"] floating enable, border none, resize set 915 600, move position center
 for_window [class="mpv"] floating enable, border none, resize set 900 800, move position center
+for_window [instance="tridactyl_editor"] floating enable, border none
 for_window [instance="ranger"] floating enable, border none, resize set 1265 635, move position center
 for_window [class="Spotify"] floating enable, border none, resize set 1265 635, move position center
 for_window [class="qutebrowser"] floating enable, border none, resize set 950 680, move position center
