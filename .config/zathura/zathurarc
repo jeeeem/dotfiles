@@ -3,4 +3,3 @@ set recolor true
 set recolor-lightcolor "#FFFFF0"
 set recolor-darkcolor "#000000"
 
-set selection-clipboard clipboard
