@@ -68,6 +68,7 @@ source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 eval "$(lua ~/.zplug/repos/z.lua/z.lua --init zsh enhanced)"
 zplug "momo-lab/zsh-abbrev-alias"
+eval "$(thefuck --alias)"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,15 +110,20 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
-alias cp="cp -g"
-alias mv="mv -g"
+alias cp="cp -ivg"
+#alias dck="sudo docker "
+#alias dcmp="sudo docker-compose "
+alias docker="sudo docker "
+alias docker-compose="sudo docker-compose "
+alias mv="mv -ivg"
 alias eft="enable-fzf-tab"
 alias tft="toggle-fzf-tab"
-#alias ls="exa -lhFbTL1 --icons"
+alias ls="exa -lhFbTL1 --icons"
 alias lsg="exa -lhFbG --icons"
 alias gcm="git commit -m"
 alias cl="clear"
 alias nr="npm run"
+alias psg="ps aux | grep"
 alias k9="killall -9"
 alias lg="lazygit"
 alias t="tmux -u" # Create tmux session and use UTF-8 output.
@@ -129,13 +135,13 @@ alias tkt="tmux kill-session -t"
 alias tks="tmux kill-server"
 alias r="ranger"
 alias v="nvim"
+alias vw="nvim -c VimwikiIndex"
 alias rmswap="rm -rf ~/.local/share/nvim/swap"
 alias zat="zathura"
 alias zh='z -I -t .'
 
 # Abbreviation
 abbrev-alias -g sps="sudo pacman -S"
-abbrev-alias -g spsyu="sudo pacman -Syu"
 
 # Auto-expand aliases (Not working alongside with Vi-mod)
 #function expand-alias() {
