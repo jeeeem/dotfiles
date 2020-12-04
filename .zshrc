@@ -8,7 +8,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.emacsbin:$PATH"
-export TMPDIR=~/tmp
+#export TMPDIR=~/tmp
 #export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
@@ -110,6 +110,7 @@ export LANG=en_US.UTF-8
 #
 
 # Aliases
+alias ag="alias | grep "
 alias cp="cp -ivg"
 #alias dck="sudo docker "
 #alias dcmp="sudo docker-compose "
@@ -133,6 +134,7 @@ alias tat="tmux -u a -t"
 alias tls="tmux ls"
 alias tkt="tmux kill-session -t"
 alias tks="tmux kill-server"
+alias tw="taskwarrior-tui"
 alias r="ranger"
 alias v="nvim"
 alias vw="nvim -c VimwikiIndex"

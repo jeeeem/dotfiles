@@ -9,12 +9,17 @@ success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being
 [package]
 disabled = true
 
-#[battery]
-#full_symbol = "🔋"
-#charging_symbol = "⚡️"
-#discharging_symbol = "💀"
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
 
 #[[battery.display]]
 #threshold = 10
 #style = "bold red"
 
+[git_branch]
+symbol = " "
+
+[python]
+symbol = " "
