@@ -1,6 +1,3 @@
-# i3 config file (v4)
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 # Super key (Windows key)
 set $mod Mod4
 set $alt Mod1
@@ -45,18 +42,31 @@ bindsym $alt+KP_Enter exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec "rofi -show run -show-icons -terminal alacritty -lines 5"
+# Make the currently focused window a scratchpad
+bindsym $alt+Shift+minus move scratchpad
+bindsym $alt+minus scratchpad show
+
+# Scratchpad Applications
+exec alacritty --class spt 
+exec alacritty --class taskwarrior 
+exec alacritty --class news -e newsboat
+
+for_window [instance="taskwarrior"] mark "taskwarrior", move scratchpad, move position center, sticky enable
+for_window [instance="spt"] mark "spt", move scratchpad, move position center, sticky enable
+for_window [instance="news"] mark "news", move scratchpad, move position center, sticky enable
+
+bindsym $alt+t [con_mark="taskwarrior"] scratchpad show
+bindsym $alt+s [con_mark="spt"] scratchpad show,
+bindsym $alt+n [con_mark="news"] scratchpad show,
+
+# Start Rofi (Program Launcher)
 bindsym $mod+d exec rofi -show drun -show-icons -lines 10
 
 # Clipboard
 exec --no-startup-id "/usr/bin/greenclip daemon"
 bindsym $alt+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# Default Keybindings
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -204,17 +214,6 @@ workspace $ws18 output VGA-1
 workspace $ws19 output VGA-1
 workspace $ws20 output VGA-1
 
-#assign [class="Code"] $ws2
-#assign [class="neovide"] $ws2
-assign [instance="monitor"] $ws4
-#for_window [class="mpv"] move to workspace $ws5
-#assign [class="xpad"] $ws6
-assign [class="xpad"]  $ws6
-for_window [class="xpad"] move to workspace $ws6
-assign [instance="news"] $ws7
-#for_window [class="ktorrent"] move to workspace $ws8
-#assign [class="Anki"] $ws9
-#for_window [class="Spotify"] move to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -259,22 +258,24 @@ bindsym $mod+r mode "resize"
 #}
 
 # Start Polybar
-#exec polybar statusbar
-#exec_always killall polybar
-#exec_always --nostartup-id polybar statusbar
-#exec_always polybar statusbar
-
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 
 # Starting things with Plasma I3
-
 ## Startup Applications
 exec alacritty --class monitor -e bpytop
-#exec alacritty --class monitor -e htop
-#exec alacritty --class monitor -e gotop
-exec alacritty --class news -e newsboat
 exec --no-startup-id xpad
-#exec neovide
+
+#assign [class="Code"] $ws2
+#assign [class="neovide"] $ws2
+assign [instance="monitor"] $ws4
+#for_window [class="mpv"] move to workspace $ws5
+#assign [class="xpad"] $ws6
+assign [class="xpad"]  $ws6
+for_window [class="xpad"] move to workspace $ws6
+assign [instance="news"] $ws7
+#for_window [class="ktorrent"] move to workspace $ws8
+#assign [class="Anki"] $ws9
+#for_window [class="Spotify"] move to workspace $ws10
 
 bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec emacs
@@ -306,7 +307,7 @@ for_window [class="ark"] floating enable, border none
 for_window [class="Anki"] floating enable, border none, move position center
 for_window [class="feh"] floating enable, border none, move position center
 for_window [class="gwenview"] floating enable, border none, move position center
-for_window [class="xdman-Main"] floating enable, border none, move position center
+for_window [class="xdman-Main"] floating enable, border none, move position center, no_focus
 for_window [class="Kmix"] floating enable, border none
 for_window [class="kolourpaint"] floating enable, border none
 for_window [class="okular"] floating enable, border none

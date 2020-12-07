@@ -134,6 +134,7 @@ alias tat="tmux -u a -t"
 alias tls="tmux ls"
 alias tkt="tmux kill-session -t"
 alias tks="tmux kill-server"
+alias tsk="task"
 alias tw="taskwarrior-tui"
 alias r="ranger"
 alias v="nvim"
@@ -144,6 +145,7 @@ alias zh='z -I -t .'
 
 # Abbreviation
 abbrev-alias -g sps="sudo pacman -S"
+abbrev-alias -g tskp="task project:P"
 
 # Auto-expand aliases (Not working alongside with Vi-mod)
 #function expand-alias() {
