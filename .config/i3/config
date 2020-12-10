@@ -47,24 +47,29 @@ bindsym $alt+Shift+minus move scratchpad
 bindsym $alt+minus scratchpad show
 
 # Scratchpad Applications
+exec alacritty --class scratchpad
 exec alacritty --class spt 
 exec alacritty --class taskwarrior 
 exec alacritty --class news -e newsboat
 
-for_window [instance="taskwarrior"] mark "taskwarrior", move scratchpad, move position center, sticky enable
-for_window [instance="spt"] mark "spt", move scratchpad, move position center, sticky enable
-for_window [instance="news"] mark "news", move scratchpad, move position center, sticky enable
+for_window [instance="scratchpad"] mark "scratchpad", floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
+for_window [instance="taskwarrior"] mark "taskwarrior",floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
+for_window [instance="spt"] mark "spt", floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
+for_window [instance="news"] mark "news", floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
 
+bindsym $alt+grave [con_mark="scratchpad"] scratchpad show
 bindsym $alt+t [con_mark="taskwarrior"] scratchpad show
 bindsym $alt+s [con_mark="spt"] scratchpad show,
 bindsym $alt+n [con_mark="news"] scratchpad show,
+
+bindsym $alt+c move position center
 
 # Start Rofi (Program Launcher)
 bindsym $mod+d exec rofi -show drun -show-icons -lines 10
 
 # Clipboard
 exec --no-startup-id "/usr/bin/greenclip daemon"
-bindsym $alt+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # Default Keybindings
 bindsym $mod+h focus left
@@ -98,10 +103,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in vertical orientation
-bindsym $mod+v split h
+#bindsym $mod+v split h
 
 # split in horizontal orientation
-bindsym $mod+c split v
+#bindsym $mod+c split v
 
 # enter fullscreen mede for the focused container
 bindsym $mod+f fullscreen toggle
@@ -214,7 +219,6 @@ workspace $ws18 output VGA-1
 workspace $ws19 output VGA-1
 workspace $ws20 output VGA-1
 
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -272,7 +276,6 @@ assign [instance="monitor"] $ws4
 #assign [class="xpad"] $ws6
 assign [class="xpad"]  $ws6
 for_window [class="xpad"] move to workspace $ws6
-assign [instance="news"] $ws7
 #for_window [class="ktorrent"] move to workspace $ws8
 #assign [class="Anki"] $ws9
 #for_window [class="Spotify"] move to workspace $ws10
