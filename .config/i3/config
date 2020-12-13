@@ -46,21 +46,31 @@ bindsym $mod+Shift+q kill
 bindsym $alt+Shift+minus move scratchpad
 bindsym $alt+minus scratchpad show
 
+# Shortcut key for Applications
+bindsym $mod+F1 exec firefox
+bindsym $mod+F2 exec emacs
+bindsym $mod+F3 exec dolphin
+bindsym $mod+F4 exec anki
+
 # Scratchpad Applications
 exec alacritty --class scratchpad
 exec alacritty --class spt 
 exec alacritty --class taskwarrior 
 exec alacritty --class news -e newsboat
+exec dolphin
 
+for_window [class="dolphin"] floating enable, border none, resize set 1200 650, move position center, move scratchpad, sticky enable
 for_window [instance="scratchpad"] mark "scratchpad", floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
 for_window [instance="taskwarrior"] mark "taskwarrior",floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
 for_window [instance="spt"] mark "spt", floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
 for_window [instance="news"] mark "news", floating enable, resize set 1000 600, move position 270px 120px, move scratchpad, sticky enable
 
+# Keybindings
 bindsym $alt+grave [con_mark="scratchpad"] scratchpad show
+bindsym $alt+e [class="dolphin"] scratchpad show
 bindsym $alt+t [con_mark="taskwarrior"] scratchpad show
-bindsym $alt+s [con_mark="spt"] scratchpad show,
-bindsym $alt+n [con_mark="news"] scratchpad show,
+bindsym $alt+s [con_mark="spt"] scratchpad show
+bindsym $alt+n [con_mark="news"] scratchpad show
 
 bindsym $alt+c move position center
 
@@ -175,7 +185,7 @@ bindsym $alt+0 workspace number $ws20
 
 bindsym $alt+Tab workspace back_and_forth
 
-# move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -269,21 +279,16 @@ exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 exec alacritty --class monitor -e bpytop
 exec --no-startup-id xpad
 
-#assign [class="Code"] $ws2
-#assign [class="neovide"] $ws2
+# assign [class="Code"] $ws2
+# assign [class="neovide"] $ws2
 assign [instance="monitor"] $ws4
-#for_window [class="mpv"] move to workspace $ws5
-#assign [class="xpad"] $ws6
+# for_window [class="mpv"] move to workspace $ws5
+# assign [class="xpad"] $ws6
 assign [class="xpad"]  $ws6
 for_window [class="xpad"] move to workspace $ws6
-#for_window [class="ktorrent"] move to workspace $ws8
-#assign [class="Anki"] $ws9
-#for_window [class="Spotify"] move to workspace $ws10
-
-bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec emacs
-bindsym $mod+F3 exec dolphin
-bindsym $mod+F4 exec anki
+# for_window [class="ktorrent"] move to workspace $ws8
+# assign [class="Anki"] $ws9
+# for_window [class="Spotify"] move to workspace $ws10
 
 # Desktop Background 
 #exec_always sh ~/.fehbg
@@ -299,7 +304,6 @@ for_window [class="Plasma"] floating enable, border none
 for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
 for_window [class="krunner"] floating enable, border none, move right 450
-for_window [class="dolphin"] floating enable, border none, resize set 915 600, move position center
 for_window [class="mpv"] floating enable, border none, resize set 900 800, move position center
 for_window [instance="tridactyl_editor"] floating enable, border none
 for_window [instance="ranger"] floating enable, border none, resize set 1265 635, move position center
