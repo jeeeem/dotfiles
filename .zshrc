@@ -26,7 +26,6 @@ eval "$(starship init zsh)"
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 # THEME CONFIGURATION
 
@@ -123,8 +122,11 @@ alias ls="exa -lhFbTL1 --icons"
 alias lsg="exa -lhFbG --icons"
 alias gcm="git commit -m"
 alias cl="clear"
+alias ni="npm install"
+alias nu="npm uninstall"
 alias nr="npm run"
 alias psg="ps aux | grep"
+alias py="python3"
 alias k9="killall -9"
 alias lg="lazygit"
 alias t="tmux -u" # Create tmux session and use UTF-8 output.
@@ -136,6 +138,7 @@ alias tkt="tmux kill-session -t"
 alias tks="tmux kill-server"
 alias tsk="task"
 alias tw="taskwarrior-tui"
+alias unlock='sudo rm /var/lib/pacman/db.lck'
 alias r="ranger"
 alias v="nvim"
 alias vw="nvim -c VimwikiIndex"

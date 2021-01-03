@@ -32,11 +32,13 @@ data.location=~/.task
 color.uda.priority.H=color255
 color.uda.priority.L=color245
 color.uda.priority.M=color250
+color.uda.priority.C=color240
 
 uda.priority.label=Priority
 uda.priority.type=string
-uda.priority.values=H,M,L,
+uda.priority.values=H,M,L,C,
 
+urgency.uda.priority.C.coefficient=20
 urgency.uda.priority.H.coefficient=15
 urgency.uda.priority.M.coefficient=10
 urgency.uda.priority.L.coefficient=5

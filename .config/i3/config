@@ -19,7 +19,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet &
 exec --no-startup-id fcitx &
 
 # Use pactl to adjust volume in PulseAudio.
@@ -67,7 +67,7 @@ for_window [instance="news"] mark "news", floating enable, resize set 1000 600, 
 
 # Keybindings
 bindsym $alt+grave [con_mark="scratchpad"] scratchpad show
-bindsym $alt+e [class="dolphin"] scratchpad show
+bindsym $alt+Shift+e [class="dolphin"] scratchpad show
 bindsym $alt+t [con_mark="taskwarrior"] scratchpad show
 bindsym $alt+s [con_mark="spt"] scratchpad show
 bindsym $alt+n [con_mark="news"] scratchpad show
@@ -277,17 +277,14 @@ exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 # Starting things with Plasma I3
 ## Startup Applications
 exec alacritty --class monitor -e bpytop
-exec --no-startup-id xpad
+exec xpad
+#exec --no-startup-id xpad
 
 # assign [class="Code"] $ws2
 # assign [class="neovide"] $ws2
 assign [instance="monitor"] $ws4
-# for_window [class="mpv"] move to workspace $ws5
-# assign [class="xpad"] $ws6
 assign [class="xpad"]  $ws6
 for_window [class="xpad"] move to workspace $ws6
-# for_window [class="ktorrent"] move to workspace $ws8
-# assign [class="Anki"] $ws9
 # for_window [class="Spotify"] move to workspace $ws10
 
 # Desktop Background 
