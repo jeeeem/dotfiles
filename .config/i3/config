@@ -32,6 +32,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+bindsym $alt+Shift+s exec flameshot gui
+
 # Start a Terminal
 bindsym $mod+Return exec alacritty
 bindsym $alt+Return exec alacritty
@@ -307,6 +309,7 @@ for_window [instance="ranger"] floating enable, border none, resize set 1265 635
 for_window [class="Spotify"] floating enable, border none, resize set 1265 635, move position center
 for_window [class="qutebrowser"] floating enable, border none, resize set 950 680, move position center
 for_window [class="vlc"] floating enable, border none, move position center
+for_window [class="flameshot"] floating enable, border none,
 for_window [class="ark"] floating enable, border none
 for_window [class="Anki"] floating enable, border none, move position center
 for_window [class="feh"] floating enable, border none, move position center
